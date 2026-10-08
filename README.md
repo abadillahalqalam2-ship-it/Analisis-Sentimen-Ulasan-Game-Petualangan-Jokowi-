@@ -103,7 +103,7 @@ sentiment-analysis-petualangan-jokowi/
 7. **WordCloud**: visualisasi kata dominan per kelas.
 8. **Chatbot**: bangun dan deploy chatbot (6 intent: salam, terima_kasih, tentang_game, karakter, gameplay, bug_dan_masalah).
 
-![Tampilan Chatbot](images/chatbot.png)
+![Tampilan Chatbot](https://github.com/abadillahalqalam2-ship-it/Analisis-Sentimen-Ulasan-Game-Petualangan-Jokowi-/blob/main/chatbotss.PNG)
 
 ## ⚠️ Keterbatasan
 
