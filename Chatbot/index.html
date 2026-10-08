@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusat Bantuan - Petualangan Jokowi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-content">
+                <!-- Mengubah ikon otak menjadi ikon headset CS -->
+                <i class="fas fa-headset avatar-icon"></i>
+                <div class="header-text">
+                    <h2>Pusat Bantuan Game</h2>
+                    <p>Layanan Pelanggan Resmi</p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="chat-box" id="chatBox">
+            <div class="msg bot">
+                <i class="fas fa-robot msg-icon"></i>
+                <!-- Mengubah pesan sapaan pertama agar sesuai dengan Mimin CS -->
+                <div class="msg-content">Halo Kak! Selamat datang di Pusat Layanan Pelanggan Game Petualangan Jokowi. Saya Mimin CS yang siap membantu menjawab pertanyaan atau mencatat keluhan Kakak hari ini. Ada yang bisa saya bantu?</div>
+            </div>
+        </div>
+ 
+        <div class="chat-input-container">
+            <div class="chat-input">
+                <!-- Mengubah teks bayangan di kolom pengetikan -->
+                <input type="text" id="userInput" placeholder="Ketik pesan atau keluhan Kakak..." autocomplete="off">
+                <button onclick="sendMessage()" id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>

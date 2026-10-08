@@ -1,0 +1,200 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+ 
+body {
+    /* ========================================= */
+    /* 1. WALLPAPER UNTUK LAYAR BELAKANG (LUAR)  */
+    /* ========================================= */
+    background-color: #eceff1; 
+    
+    /* Menggunakan Link Gambar YouTube yang kamu berikan */
+    background-image: url('https://i.ytimg.com/vi/jZAFE6TB3KU/maxresdefault.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Memberikan efek blur dan sedikit gelap agar kotak chat tidak tertabrak gambar */
+    backdrop-filter: blur(4px) brightness(0.8);
+    /* ========================================= */
+    
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh; 
+    padding: 20px;
+}
+ 
+.chat-container {
+    background: #ffffff;
+    width: 100%; 
+    max-width: 450px;
+    border-radius: 20px; 
+    overflow: hidden;
+    /* Bayangan ditebalkan agar kotak chat lebih 'terangkat' dari background */
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    display: flex; 
+    flex-direction: column; 
+    height: 650px;
+}
+ 
+.chat-header {
+    background: linear-gradient(135deg, #e53935 0%, #b71c1c 100%); 
+    color: #ffffff;
+    padding: 20px; 
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar-icon {
+    font-size: 28px;
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.chat-header h2 { 
+    font-size: 16px; 
+    font-weight: 600;
+}
+.chat-header p { 
+    font-size: 12px; 
+    opacity: 0.9; 
+}
+ 
+.chat-box {
+    flex: 1; 
+    padding: 20px;
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    /* ========================================= */
+    /* 2. WALLPAPER UNTUK RUANG OBROLAN (DALAM)  */
+    /* ========================================= */
+    background-color: #fdfbfb;
+    /* Pola kotak-kotak halus ala WhatsApp */
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); 
+    background-blend-mode: multiply; 
+    /* ========================================= */
+}
+
+.chat-box::-webkit-scrollbar { width: 6px; }
+.chat-box::-webkit-scrollbar-track { background: #f1f1f1; }
+.chat-box::-webkit-scrollbar-thumb { background: #ffcdd2; border-radius: 10px; }
+ 
+.msg {
+    display: flex;
+    gap: 10px;
+    max-width: 85%;
+}
+
+.msg-content {
+    padding: 12px 16px; 
+    border-radius: 18px;
+    font-size: 14px; 
+    line-height: 1.5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    word-wrap: break-word;
+}
+
+.msg.bot { align-self: flex-start; }
+.msg.bot .msg-content {
+    /* Sedikit ditransparankan agar background pola terlihat samar */
+    background: rgba(255, 255, 255, 0.95); 
+    color: #333333; 
+    border-bottom-left-radius: 4px;
+    border: 1px solid #ffcdd2; 
+}
+.msg.bot .msg-icon {
+    color: #e53935; 
+    font-size: 18px;
+    margin-top: 5px;
+    /* Lingkaran putih di belakang ikon bot agar tegas */
+    background: #ffffff;
+    border-radius: 50%;
+    height: fit-content;
+}
+
+.msg.user { 
+    align-self: flex-end; 
+    flex-direction: row-reverse;
+}
+.msg.user .msg-content {
+    background: #e53935; 
+    color: #ffffff;    
+    border-bottom-right-radius: 4px;
+}
+
+/* ========================================= */
+/* CSS KHUSUS TOMBOL QUICK REPLIES           */
+/* ========================================= */
+.quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    padding-left: 38px;
+}
+
+.qr-btn {
+    background: rgba(255, 235, 238, 0.9);
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.qr-btn:hover {
+    background: #c62828;
+    color: #ffffff;
+}
+/* ========================================= */
+ 
+.chat-input-container {
+    padding: 15px 20px;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+}
+
+.chat-input {
+    display: flex; 
+    background: #f5f5f5;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.chat-input input {
+    flex: 1; 
+    padding: 10px 15px; 
+    border: none;
+    background: transparent;
+    font-size: 14px; 
+    outline: none;
+}
+
+.chat-input button {
+    width: 40px;
+    height: 40px;
+    background: #e53935; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer; 
+    transition: background 0.3s ease;
+}
+
+.chat-input button:hover { background: #b71c1c; }
